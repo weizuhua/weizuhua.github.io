@@ -158,6 +158,408 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-找工作遇到的一些常见面试题1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/10/16/找工作遇到的一些常见面试题1/">找工作遇到的一些常见面试题1</a>
+    </h1>
+  
+
+        
+        <a href="/2019/10/16/找工作遇到的一些常见面试题1/" class="archive-article-date">
+  	<time datetime="2019-10-15T19:04:55.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-16</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>最近开始找前端工作，也陆陆续续面试了几家公司。发现面试官对同学的js基础还是比较看重的，不过问的问题都大同小异。下面就总结一些本人以及同学面试过程中遇到的一些高频面试题。希望能对大家有所帮助。</p>
+<h2 id="一、从输入URL到页面展示发生了什么。"><a href="#一、从输入URL到页面展示发生了什么。" class="headerlink" title="一、从输入URL到页面展示发生了什么。"></a>一、从输入URL到页面展示发生了什么。</h2><p>  其实这个问题牵扯到的知识点非常的庞杂，涉及到的每个知识点都可以用专门的学科去研究。这里简单概括一下大概流程。<br>    1、输入网址<br>    2、DNS解析<br>    3、建立tcp连接<br>    4、客户端发送HTPP请求<br>    5、服务器处理请求　<br>    6、服务器响应请求<br>    7、浏览器展示HTML<br>    8、浏览器发送请求获取其他在HTML中的资源。<br>面试官考察的是面试者对知识面的考察，这其中的每个知识点都可以去详细的解答。在这就不过多赘述。</p>
+<h2 id="二、说说你对闭包的理解"><a href="#二、说说你对闭包的理解" class="headerlink" title="二、说说你对闭包的理解"></a>二、说说你对闭包的理解</h2><p>  使用闭包主要是为了设计私有的方法和变量。闭包的优点是可以避免全局变量的污染；缺点是闭包会常驻内存，增加内存使用量，使用不当会造成内存泄漏，在js中，函数即闭包，只有函数才会产生作用域。<br>  闭包有三个特性：<br>    1、函数嵌套函数<br>    2、在函数内部可以引用外部的参数和变量。<br>    3、参数和变量不会以垃圾机制回收。</p>
+<h2 id="三、call-和apply-的作用和区别是什么？"><a href="#三、call-和apply-的作用和区别是什么？" class="headerlink" title="三、call()和apply()的作用和区别是什么？"></a>三、call()和apply()的作用和区别是什么？</h2><p>  作用都是在函数执行的时候，动态改变函数的执行上下文。<br>  call和apply的第一个参数都是改变运行环境的对象。区别是call从第二个参数开始，每一个参数会依次传递给调用函数；apply的第二个参数是数组，数组的每一个成员会依次传递给调用函数。<br>  如：<br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">func.call(func1,var1,var2,var3)</span><br><span class="line">对应的apply写法为</span><br><span class="line">func.apply(func1,[var1,var2,var3])</span><br></pre></td></tr></table></figure></p>
+<h2 id="四、说一说原型规则"><a href="#四、说一说原型规则" class="headerlink" title="四、说一说原型规则"></a>四、说一说原型规则</h2><pre><code>1、所有的引用类型（对象、数组、函数）都具有对象特征，即可扩展属性。
+2、所有的引用类型都有一个__proto__属性，属性值是一个普通的对象。
+3、所有的函数都有一个prototype属性，属性值也是一个普通的对象。
+4、所有的引用类型的__proto__属性值指向它的构造函数的prototype属性值。（即===）
+5、当试图得到一个对象的某个属性时，如果这个对象本身没有这个属性，那么会从他的__proto__（即从他的构造函数的prototype）中寻找。</code></pre><h2 id="五、"><a href="#五、" class="headerlink" title="五、"></a>五、</h2>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/10/16/找工作遇到的一些常见面试题1/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-原型与原型链" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/10/16/原型与原型链/">原型与原型链</a>
+    </h1>
+  
+
+        
+        <a href="/2019/10/16/原型与原型链/" class="archive-article-date">
+  	<time datetime="2019-10-15T17:50:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-16</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="一、构造函数"><a href="#一、构造函数" class="headerlink" title="一、构造函数"></a>一、构造函数</h1><p>构造函数模式的目的就是为了创建一个自定义类，并且创建这个类的实例。构造函数模式中拥有了类和实例的概念，并且实例和实例之间是相互独立的，即实例识别。</p>
+<p>构造函数就是一个普通的函数，创建方式和普通函数没有区别，不同的是构造函数习惯上首字母大写。另外就是调用方式的不同，普通函数是直接调用，而构造函数需要使用new关键字来调用。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">function Person(name, age, gender) &#123;</span><br><span class="line">        this.name = name</span><br><span class="line">        this.age = age</span><br><span class="line">        this.gender = gender</span><br><span class="line">        this.sayName = function () &#123;</span><br><span class="line">            alert(this.name);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    var per = new Person(&quot;孙悟空&quot;, 18, &quot;男&quot;);</span><br><span class="line">    function Dog(name, age, gender) &#123;</span><br><span class="line">        this.name = name</span><br><span class="line">        this.age = age</span><br><span class="line">        this.gender = gender</span><br><span class="line">    &#125;</span><br><span class="line">    var dog = new Dog(&quot;旺财&quot;, 4, &quot;雄&quot;)</span><br><span class="line">    console.log(per);//当我们直接在页面中打印一个对象时，事件上是输出的对象的toString()方法的返回值</span><br><span class="line">    console.log(dog);</span><br></pre></td></tr></table></figure>
+
+<p> <img src="../%E5%8E%9F%E5%9E%8B%E4%B8%8E%E5%8E%9F%E5%9E%8B%E9%93%BE/3174701-1a20d86bf6856c95.png" alt="avatar"></p>
+<p> 每创建一个Person构造函数，在Person构造函数中，为每一个对象都添加了一个sayName方法，也就是说构造函数每执行一次就会创建一个新的sayName方法。这样就导致了构造函数执行一次就会创建一个新的方法，执行10000次就会创建10000个新的方法，而10000个方法都是一摸一样的，为什么不把这个方法单独放到一个地方，并让所有的实例都可以访问到呢?这就需要原型(prototype)</p>
+<h1 id="二、原型"><a href="#二、原型" class="headerlink" title="二、原型"></a>二、原型</h1><p>在JavaScript中，每当定义一个函数数据类型(普通函数、类)时候，都会天生自带一个prototype属性，这个属性指向函数的原型对象，并且这个属性是一个对象数据类型的值。</p>
+<p>让我们用一张图表示构造函数和实例原型之间的关系：<br><img src="../%E5%8E%9F%E5%9E%8B%E4%B8%8E%E5%8E%9F%E5%9E%8B%E9%93%BE/3174701-2dd95188a8f6b19e.png" alt="avatar"><br>原型对象就相当于一个公共的区域，所有同一个类的实例都可以访问到这个原型对象，我们可以将对象中共有的内容，统一设置到原型对象中。</p>
+<h1 id="三、原型链"><a href="#三、原型链" class="headerlink" title="三、原型链"></a>三、原型链</h1><h2 id="1-proto和constructor"><a href="#1-proto和constructor" class="headerlink" title="1.proto和constructor"></a>1.<strong>proto</strong>和constructor</h2><p>每一个对象数据类型(普通的对象、实例、prototype……)也天生自带一个属性<strong>proto</strong>，属性值是当前实例所属类的原型(prototype)。原型对象中有一个属性constructor, 它指向函数对象。<br><img src="../%E5%8E%9F%E5%9E%8B%E4%B8%8E%E5%8E%9F%E5%9E%8B%E9%93%BE/3174701-9a3de0b501161c07.png" alt="avatar"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">function Person() &#123;&#125;</span><br><span class="line">   var person = new Person()</span><br><span class="line">   console.log(person.__proto__ === Person.prototype)//true</span><br><span class="line">   console.log(Person.prototype.constructor===Person)//true</span><br><span class="line">   //顺便学习一个ES5的方法,可以获得对象的原型</span><br><span class="line">   console.log(Object.getPrototypeOf(person) === Person.prototype) // true</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-何为原型链"><a href="#2-何为原型链" class="headerlink" title="2.何为原型链"></a>2.何为原型链</h2><p>在JavaScript中万物都是对象，对象和对象之间也有关系，并不是孤立存在的。对象之间的继承关系，在JavaScript中是通过prototype对象指向父类对象，直到指向Object对象为止，这样就形成了一个原型指向的链条，专业术语称之为原型链。</p>
+<p>举例说明:person → Person → Object ，普通人继承人类，人类继承对象类</p>
+<p>当我们访问对象的一个属性或方法时，它会先在对象自身中寻找，如果有则直接使用，如果没有则会去原型对象中寻找，如果找到则直接使用。如果没有则去原型的原型中寻找,直到找到Object对象的原型，Object对象的原型没有原型，如果在Object原型中依然没有找到，则返回undefined。</p>
+<p>我们可以使用对象的hasOwnProperty()来检查对象自身中是否含有该属性；使用in检查对象中是否含有某个属性时，如果对象中没有但是原型中有，也会返回true</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">function Person() &#123;&#125;</span><br><span class="line">    Person.prototype.a = 123;</span><br><span class="line">    Person.prototype.sayHello = function () &#123;</span><br><span class="line">      alert(&quot;hello&quot;);</span><br><span class="line">    &#125;;</span><br><span class="line">    var person = new Person()</span><br><span class="line">    console.log(person.a)//123</span><br><span class="line">    console.log(person.hasOwnProperty(&apos;a&apos;));//false</span><br><span class="line">    console.log(&apos;a&apos;in person)//true</span><br></pre></td></tr></table></figure>
+
+<p>person实例中没有a这个属性，从 person 对象中找不到 a 属性就会从 person 的原型也就是 person.<strong>proto</strong> ，也就是 Person.prototype中查找，很幸运地得到a的值为123。那假如 person.<strong>proto</strong>中也没有该属性，又该如何查找？</p>
+<p>当读取实例的属性时，如果找不到，就会查找与对象关联的原型中的属性，如果还查不到，就去找原型的原型，一直找到最顶层Object为止。Object是JS中所有对象数据类型的基类(最顶层的类)在Object.prototype上没有<strong>proto</strong>这个属性。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">console.log(Object.prototype.__proto__ === null) // true</span><br></pre></td></tr></table></figure>
+
+<p><img src="../%E5%8E%9F%E5%9E%8B%E4%B8%8E%E5%8E%9F%E5%9E%8B%E9%93%BE/3174701-18a76d28c0a9ea1b.png" alt="avatar"></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/10/16/原型与原型链/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-css基础总结" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/09/25/css基础总结/">css基础总结</a>
+    </h1>
+  
+
+        
+        <a href="/2019/09/25/css基础总结/" class="archive-article-date">
+  	<time datetime="2019-09-24T17:53:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-25</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="什么是css"><a href="#什么是css" class="headerlink" title="什么是css"></a>什么是css</h1><p>css即层叠样式表，用于控制网页数据的表现，使得网页数据和表现控制分离。<br>css引入的是四种方式<br>行内式</p>
+<p>行内式就是在标签内部的style属性编辑控制方式。这种方式，不能体现css的优势，不推荐！</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;p style=&quot;background-color: rebeccapurple&quot;&gt;hello css&lt;/p&gt;</span><br></pre></td></tr></table></figure>
+
+<p>嵌入式</p>
+<p>嵌入式指的是在head标签中，嵌入style标签控制对应的标签</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset=&quot;UTF-8&quot;&gt;</span><br><span class="line">    &lt;title&gt;Title&lt;/title&gt;</span><br><span class="line">    &lt;style&gt;</span><br><span class="line">        p&#123;</span><br><span class="line">            </span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &lt;/style&gt;</span><br><span class="line">&lt;/head&gt;</span><br></pre></td></tr></table></figure>
+
+<p>链接式</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset=&quot;UTF-8&quot;&gt;</span><br><span class="line">    &lt;title&gt;Title&lt;/title&gt;</span><br><span class="line">    &lt;link rel=&quot;stylesheet&quot; href=&quot;1.css&quot;&gt;</span><br><span class="line">&lt;/head&gt;</span><br></pre></td></tr></table></figure>
+
+<p>导入式</p>
+<p>同样在head标签中嵌套style，然后在style里导入css文件链接</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset=&quot;UTF-8&quot;&gt;</span><br><span class="line">    &lt;title&gt;Title&lt;/title&gt;</span><br><span class="line">    &lt;style&gt;</span><br><span class="line">        @import &quot;1.css&quot;;</span><br><span class="line">    &lt;/style&gt;</span><br><span class="line">&lt;/head&gt;</span><br></pre></td></tr></table></figure>
+
+<p>注意：使用导入式，css是在整个页面都加载后再导入的，这样就可能导致网页在一个短时间内处于杂乱的状态。但是链接式不一样，他是在加载网页内容前，先导入的，所以不存在这个问题。</p>
+<h1 id="css选择器"><a href="#css选择器" class="headerlink" title="css选择器"></a>css选择器</h1><p>css选择器是指如何去选择具体的某个标签，然后去实现控制。<br>1.基础选择器</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">*:通用元素选择器，控制所有的标签</span><br><span class="line">*&#123;background-color: rebeccapurple&#125;</span><br><span class="line">E:标签选择器，控制所有该标签的样式</span><br><span class="line">p*&#123;background-color: rebeccapurple&#125;</span><br><span class="line">.info class选择器 也可以具体指定某个标签下的选择器 E .class</span><br><span class="line">.abc&#123;background-color: rebeccapurple&#125;</span><br><span class="line">div .abc&#123;background-color: red&#125;</span><br><span class="line">#info E #info id 选择器。 ID是唯一的，class也可以不唯一。</span><br><span class="line">#abc&#123;background-color: rebeccapurple&#125;</span><br><span class="line">div #abc&#123;background-color: red&#125;</span><br></pre></td></tr></table></figure>
+
+<p>2、组合选择器</p>
+<p>E,F 多元素选择器，同时控制多个元素。div,a{background-color: rebeccapurple}<br>E F 后代选择器，注意空格。<br>E&gt;F 子选择器<br>E+F 毗邻选择器，找到紧跟着E后面的F。</p>
+<p>注意：后代选择器是包括子孙后代，子选择器只包括子代<br>3、属性选择器</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">E[att]         匹配所有具有att属性的E元素，不考虑它的值。（注意：E在此处可以省略，比如“[cheacked]”。以下同。）   p[title] &#123; color:#f00; &#125;</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"> E[att=val]     匹配所有att属性等于“val”的E元素                                 div[class=”error”] &#123; color:#f00; &#125;</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"> E[att~=val]    匹配所有att属性具有多个空格分隔的值、其中一个值等于“val”的E元素      td[class~=”name”] &#123; color:#f00; &#125;</span><br><span class="line"></span><br><span class="line"> E[attr^=val]    匹配属性值以指定值开头的每个元素                     div[class^=&quot;test&quot;]&#123;background:#ffff00;&#125;</span><br><span class="line"></span><br><span class="line"> E[attr$=val]    匹配属性值以指定值结尾的每个元素                     div[class$=&quot;test&quot;]&#123;background:#ffff00;&#125;</span><br><span class="line"></span><br><span class="line"> E[attr*=val]    匹配属性值中包含指定值的每个元素                     div[class*=&quot;test&quot;]&#123;background:#ffff00;&#125;</span><br></pre></td></tr></table></figure>
+
+<p>4、伪类</p>
+<p>用于给选择器，增加一些效果。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">a:link 控制没接触过的链接</span><br><span class="line">a:hover 鼠标放在上面时</span><br><span class="line">a:visited 已经访问的链接</span><br><span class="line">a:active  选定的时候</span><br></pre></td></tr></table></figure>
+
+<h1 id="css的继承和优先级"><a href="#css的继承和优先级" class="headerlink" title="css的继承和优先级"></a>css的继承和优先级</h1><p>所谓的css优先级是指在多个选择器同时控制同一个标签时，应该选择哪一个。</p>
+<p>1、内联样式表权重为1000<br>2、ID，一个ID权重为100<br>3、class，权重为10<br>4、标签， 权重为1<br>计算方式是逐个累加。 比如 div .aaa权重为1+10</p>
+<p>css 的继承：</p>
+<p>所谓的继承就是说父标签的部分属性可以被后代继承，但是这个权重是非常低的，只要是有相同的属性控制，就可以直接被覆盖。<br>有部分属性是无法被继承的:border, margin, padding, background等<br>!important</p>
+<p>有这个声明的优先级是最高的，除非冲突不然无视一切。当冲突时，再使用权重比较。</p>
+<h1 id="css的常用属性"><a href="#css的常用属性" class="headerlink" title="css的常用属性"></a>css的常用属性</h1><p>颜色属性</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;div style=&quot;color:blueviolet&quot;&gt;ppppp&lt;/div&gt;</span><br><span class="line"> </span><br><span class="line">&lt;div style=&quot;color:#ffee33&quot;&gt;ppppp&lt;/div&gt;</span><br><span class="line"> </span><br><span class="line">&lt;div style=&quot;color:rgb(255,0,0)&quot;&gt;ppppp&lt;/div&gt;</span><br><span class="line"> </span><br><span class="line">&lt;div style=&quot;color:rgba(255,0,0,0.5)&quot;&gt;ppppp&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+
+<p>/<em>a 透明度</em>/</p>
+<p>字体属性</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">font-size: 20px/50%/larger</span><br><span class="line"> </span><br><span class="line">font-family:&apos;Lucida Bright&apos;</span><br><span class="line"> </span><br><span class="line">font-weight: lighter/bold/border/</span><br><span class="line"> </span><br><span class="line">&lt;h1 style=&quot;font-style: oblique&quot;&gt;hello&lt;/h1&gt;</span><br></pre></td></tr></table></figure>
+
+<p>背景属性</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">background-color: cornflowerblue</span><br><span class="line"></span><br><span class="line">background-image: url(&apos;1.jpg&apos;);</span><br><span class="line"></span><br><span class="line">background-repeat: no-repeat;(repeat:平铺满)</span><br><span class="line"></span><br><span class="line">background-position: right top（20px 20px）;(横向：left center right)(纵向：top center bottom)</span><br></pre></td></tr></table></figure>
+
+<p>文本属性</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">font-size: 10px;</span><br><span class="line">text-align: center;   横向排列</span><br><span class="line">line-height: 200px;   文本行高 通俗的讲，文字高度加上文字上下的空白区域的高度 50%:基于字体大小的百分比</span><br><span class="line">vertical-align:－4px  设置元素内容的垂直对齐方式 ,只对行内元素有效，对块级元素无效</span><br><span class="line">text-indent: 150px;   首行缩进</span><br><span class="line">letter-spacing: 10px;</span><br><span class="line">word-spacing: 20px;</span><br><span class="line">text-transform: capitalize;</span><br></pre></td></tr></table></figure>
+
+<p>边框属性</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">border-color: red;</span><br><span class="line">border-style: dashed;</span><br><span class="line">border-width: 1px;</span><br></pre></td></tr></table></figure>
+
+<p>可以简写为：border：1px dashed 1px</p>
+<h1 id="display属性"><a href="#display属性" class="headerlink" title="display属性"></a>display属性</h1><p>none<br>block<br>inline<br>inline-block<br>其中inline-block拼接的两个元素中间有小空隙，可以通过下面的方法去掉<br>在外层div下，word-spacing: -5px;</p>
+<p>外边距，内边距<br>margin 外边距<br> padding 内边距<br>border 边框<br> content 内容</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/09/25/css基础总结/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-css知识点集锦" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/09/25/css知识点集锦/">css知识点集锦</a>
+    </h1>
+  
+
+        
+        <a href="/2019/09/25/css知识点集锦/" class="archive-article-date">
+  	<time datetime="2019-09-24T17:26:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-25</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="一、文本显示固定行数，多余的省略"><a href="#一、文本显示固定行数，多余的省略" class="headerlink" title="一、文本显示固定行数，多余的省略"></a>一、文本显示固定行数，多余的省略</h1><p>1、文本只显示一行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;style type=&quot;text/css&quot;&gt;</span><br><span class="line">   .text &#123;</span><br><span class="line">     width: 300px;</span><br><span class="line">     white-space: nowrap;</span><br><span class="line">     overflow: hidden;</span><br><span class="line">     text-overflow: ellipsis;</span><br><span class="line">     border: solid red 1px;</span><br><span class="line">   &#125;</span><br><span class="line">&lt;/style&gt;</span><br><span class="line">&lt;div class=&quot;text&quot;&gt;</span><br><span class="line"> 《枫桥夜泊》是唐朝安史之乱后，诗人张继途经寒山寺时，写下的一首羁旅诗。</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+
+<p>2、文本显示多行（必须在visibility: visible; 且节点不设置高度的情况下才生效）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;style type=&quot;text/css&quot;&gt;</span><br><span class="line">   .text &#123;</span><br><span class="line">     width: 300px;</span><br><span class="line">     display: -webkit-box;</span><br><span class="line">     -webkit-box-orient: vertical;</span><br><span class="line">     -webkit-line-clamp: 3;</span><br><span class="line">     overflow: hidden;    </span><br><span class="line">   &#125;</span><br><span class="line">&lt;/style&gt;</span><br><span class="line">&lt;div class=&quot;text&quot;&gt;</span><br><span class="line"> 《枫桥夜泊》是唐朝安史之乱后，诗人张继途经寒山寺时，写下的一首羁旅诗。在这首诗中，诗人精确而细腻地讲述了一个客船夜泊者对江南深秋夜景的观察和感受，勾画了月落乌啼、霜天寒夜、江枫渔火、孤舟客子等景象，有景有情有声有色。</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+
+<p>3、父div中嵌套块级元素</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&lt;style type=&quot;text/css&quot;&gt;</span><br><span class="line">    .parent&#123;</span><br><span class="line">      width: 300px;</span><br><span class="line">      border: solid red 1px;</span><br><span class="line">    &#125;</span><br><span class="line">    .children&#123;</span><br><span class="line">      white-space: nowrap;</span><br><span class="line">      overflow: hidden;</span><br><span class="line">      text-overflow: ellipsis;</span><br><span class="line">    &#125; </span><br><span class="line">&lt;/style&gt;</span><br><span class="line">&lt;div class=&quot;parent&quot;&gt;</span><br><span class="line">  &lt;div class=&quot;children&quot;&gt;《枫桥夜泊》是唐朝安史之乱后，诗人张继途经寒山寺时，写下的一首羁旅诗。在这首诗中，诗人精确而细腻地讲述了一个客船夜泊者对江南深秋夜景的观察和感受，勾画了月落乌啼、霜天寒夜、江枫渔火、孤舟客子等景象，有景有情有声有色。此外，这首诗也将作者羁旅之思，家国之忧，以及身处乱世尚无归宿的顾虑充分地表现出来，是写愁的代表作。&lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+
+<p>4、父div中嵌套行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">&lt;style type=&quot;text/css&quot;&gt;</span><br><span class="line">    .parent&#123;</span><br><span class="line">      width: 300px;</span><br><span class="line">      border: solid red 1px;</span><br><span class="line">    &#125;</span><br><span class="line">    .children&#123;</span><br><span class="line">      display: -webkit-box;</span><br><span class="line">      -webkit-box-orient: vertical;</span><br><span class="line">      -webkit-line-clamp: 3;</span><br><span class="line">      overflow: hidden;    </span><br><span class="line">   &#125;</span><br><span class="line">   或</span><br><span class="line">   .children&#123;</span><br><span class="line">      white-space: nowrap;</span><br><span class="line">      overflow: hidden;</span><br><span class="line">      text-overflow: ellipsis;</span><br><span class="line">      display: inline-block;</span><br><span class="line">      width: 100%;   </span><br><span class="line">   &#125;</span><br><span class="line">    或</span><br><span class="line">   .children&#123;</span><br><span class="line">      white-space: nowrap;</span><br><span class="line">      overflow: hidden;</span><br><span class="line">      text-overflow: ellipsis;</span><br><span class="line">      display: block;</span><br><span class="line">   &#125;</span><br><span class="line"> &lt;/style&gt;</span><br><span class="line">&lt;div class=&quot;parent&quot;&gt;</span><br><span class="line">  &lt;span class=&quot;children&quot;&gt;《枫桥夜泊》是唐朝安史之乱后，诗人张继途经寒山寺时，写下的一首羁旅诗。在这首诗中，诗人精确而细腻地讲述了一个客船夜泊者对江南深秋夜景的观察和感受，勾画了月落乌啼、霜天寒夜、江枫渔火、孤舟客子等景象，有景有情有声有色。此外，这首诗也将作者羁旅之思，家国之忧，以及身处乱世尚无归宿的顾虑充分地表现出来，是写愁的代表作。&lt;/span&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+
+<p>5、div中嵌套块级元素和行内元素</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">&lt;style type=&quot;text/css&quot;&gt;</span><br><span class="line">    .parent&#123;</span><br><span class="line">      width: 300px;</span><br><span class="line">      border: solid red 1px;</span><br><span class="line">      display: flex;</span><br><span class="line">      flex-direction: row;</span><br><span class="line">    &#125;</span><br><span class="line">    .children1&#123;</span><br><span class="line">      width: 100px;</span><br><span class="line">      border: solid green 1px;</span><br><span class="line">    &#125;</span><br><span class="line">    .children2&#123;</span><br><span class="line">      flex: 1;</span><br><span class="line">      border: solid blue 1px;</span><br><span class="line">    &#125;</span><br><span class="line">    .parent div&#123;</span><br><span class="line">      white-space: nowrap;</span><br><span class="line">      overflow: hidden;</span><br><span class="line">      text-overflow: ellipsis;</span><br><span class="line">    &#125;</span><br><span class="line">&lt;/style&gt;</span><br><span class="line">&lt;div class=&quot;parent&quot;&gt;</span><br><span class="line">  &lt;div class=&quot;children1&quot;&gt;《枫桥夜泊》是唐朝安史之乱后，诗人张继途经寒山寺时，写下的一首羁旅诗。在这首诗中，诗人精确而细腻地讲述了一个客船夜泊者对江南深秋夜景的观察和感受，勾画了月落乌啼、霜天寒夜、江枫渔火、孤舟客子等景象，有景有情有声有色。此外，这首诗也将作者羁旅之思，家国之忧，以及身处乱世尚无归宿的顾虑充分地表现出来，是写愁的代表作。&lt;/div&gt;</span><br><span class="line">  &lt;div class=&quot;children2&quot;&gt;</span><br><span class="line">    &lt;span&gt;《枫桥夜泊》是唐朝安史之乱后，诗人张继途经寒山寺时，写下的一首羁旅诗。在这首诗中，诗人精确而细腻地讲述了一个客船夜泊者对江南深秋夜景的观察和感受，&lt;/span&gt;</span><br><span class="line">    &lt;br&gt;&lt;span&gt;勾画了月落乌啼、霜天寒夜、江枫渔火、孤舟客子等景象，有景有情有声有色。此外，这首诗也将作者羁旅之思，家国之忧，以及身处乱世尚无归宿的顾虑充分地表现出来，是写愁的代表作。&lt;/span&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+
+<p>6、通过js限制行数，没有‘…’</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">var el = document.getElementById(&apos;children&apos;);</span><br><span class="line">  el.style.lineHeight = &apos;20px&apos;;     // 设置行高为20px</span><br><span class="line">  console.log(el.offsetHeight);</span><br><span class="line">  if (el.offsetHeight &gt; 60) &#123;</span><br><span class="line">    el.style.height = &apos;60px&apos;;</span><br><span class="line">    el.style.overflow = &apos;hidden&apos;;   // 只显示3行，其他隐藏</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+
+<p>7、弹性布局中只显示1行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">.wrap &#123;</span><br><span class="line">            width: 300px;</span><br><span class="line">            height: 100px;</span><br><span class="line">            border: solid black 1px;</span><br><span class="line">            padding: 10px;</span><br><span class="line">            position: relative;</span><br><span class="line">            margin: 0 auto;</span><br><span class="line">            display: flex;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        .first &#123;</span><br><span class="line">            width: 100px;</span><br><span class="line">            height: 100px;</span><br><span class="line">            background: blue;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        .second &#123;</span><br><span class="line">            flex: 1;</span><br><span class="line">            border: solid red 1px;</span><br><span class="line">            white-space: nowrap;      /*必须添加*/</span><br><span class="line">            overflow: hidden;</span><br><span class="line">            text-overflow: ellipsis;</span><br><span class="line">        &#125;</span><br><span class="line">        .inner &#123;</span><br><span class="line">            white-space: nowrap;      /*这三句不加的话没有‘...’,但是也会单行显示*/</span><br><span class="line">            overflow: hidden;</span><br><span class="line">            text-overflow: ellipsis;</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="二、nth-child和nth-of-type的区别"><a href="#二、nth-child和nth-of-type的区别" class="headerlink" title="二、nth-child和nth-of-type的区别"></a>二、nth-child和nth-of-type的区别</h1><p>1、p:nth-child(2)：父元素中第2个元素且是p标签<br>2、p:nth-of-type(2)：父元素中p标签里第二个元素<br>3、.item:nth-of-type(2)：若父元素中有多种标签，则按照标签分类，每类中第2个元素且类名为item的元素，若改为.child:nth-of-type(1)则没有选中元素</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">.text .child:nth-of-type(2)&#123;</span><br><span class="line">    color: red;</span><br><span class="line">&#125;</span><br><span class="line">&lt;div class=&quot;text&quot;&gt;</span><br><span class="line">  &lt;div&gt;111&lt;/div&gt;</span><br><span class="line">  &lt;span &gt;aaa&lt;/span&gt;</span><br><span class="line">  &lt;div class=&quot;child&quot;&gt;222&lt;/div&gt;</span><br><span class="line">  &lt;span class=&quot;child&quot;&gt;bbb&lt;/span&gt;</span><br><span class="line">  &lt;div class=&quot;child&quot;&gt;333&lt;/div&gt;</span><br><span class="line">  &lt;span class=&quot;child&quot;&gt;ccc&lt;/span&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+
+<h1 id="三、元素水平垂直居中"><a href="#三、元素水平垂直居中" class="headerlink" title="三、元素水平垂直居中"></a>三、元素水平垂直居中</h1><p>1、块级元素水平居中，给块级元素加上“margin: 0 auto;”即可<br>2、inline-block元素水平居中，需给父元素加上“text-align: center;”<br>3、浮动元素水平垂直居中<br>HTML如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;parent&quot;&gt;</span><br><span class="line">  &lt;div class=&quot;child&quot;&gt;&lt;/div&gt;</span><br><span class="line">  &lt;div class=&quot;child&quot;&gt;&lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>CSS如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">.parent &#123;</span><br><span class="line">     border: solid red 1px;</span><br><span class="line">     width: 800px;</span><br><span class="line">     height: 400px;</span><br><span class="line">   &#125;</span><br><span class="line">   .child &#123;</span><br><span class="line">     float: left;</span><br><span class="line">     width: 200px;</span><br><span class="line">     height: 200px;</span><br><span class="line">     position: relative;</span><br><span class="line">     top: 25%;    /*随父元素高度自行调整，百分比是相对于父元素的高度而言的*/</span><br><span class="line">     left: 25%;   /*随浮动元素个数及父元素宽度自行调整，百分比是相对于父元素的宽度而言的*/</span><br><span class="line">     background: lightgreen;</span><br><span class="line">     border: solid blue 1px;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+
+<p>4、绝对定位元素水平垂直居中<br>div宽高已知：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">.ele &#123;</span><br><span class="line">	position: absolute;</span><br><span class="line">	top: 高度值;</span><br><span class="line">	width: 宽度值;</span><br><span class="line">	top: 50%;</span><br><span class="line">	left: 50%;</span><br><span class="line">	margin-top: -(高度值/2);</span><br><span class="line">	margin-left: -(宽度值/2);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<p>div宽高未知：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">.ele &#123;</span><br><span class="line">	position: absolute;</span><br><span class="line">	top: 50%;</span><br><span class="line">	left: 50%;</span><br><span class="line">	transform: translate(-50%, -50%);  /*百分比均相对于元素自身的宽和高，第一个是X方向，第二个是Y方向*/</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<p>5、父元素绝对定位，所有子元素垂直居中<br>position:absolute和display:table-cell不能同时使用，此时可以使用弹性布局</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">HTML：</span><br><span class="line"></span><br><span class="line">&lt;div class=&quot;wrap&quot;&gt;</span><br><span class="line">    &lt;div&gt;&lt;img src=&quot;./src/assets/img/0.gif&quot;&gt;&lt;/div&gt;</span><br><span class="line">    &lt;div&gt;hello world&lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>CSS：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">.wrap &#123;</span><br><span class="line">          position: absolute;</span><br><span class="line">          width: 300px;</span><br><span class="line">          height: 200px;</span><br><span class="line">          border: solid red 1px;</span><br><span class="line">          /*下面四行起着决定性作用*/</span><br><span class="line">          justify-content: center;  </span><br><span class="line">          align-items: center;</span><br><span class="line">          display: -webkit-flex;</span><br><span class="line">          flex-direction: column;</span><br><span class="line">          text-align: center;</span><br><span class="line">      &#125;</span><br><span class="line">      .wrap img &#123;</span><br><span class="line">          width: 100px;</span><br><span class="line">      &#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="四、文本水平垂直居中-同图片"><a href="#四、文本水平垂直居中-同图片" class="headerlink" title="四、文本水平垂直居中(同图片)"></a>四、文本水平垂直居中(同图片)</h1><p>1、单行文本水平垂直居中，height和line-height相同，以及text-align: center必不可少</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;parent&quot;&gt;hello world&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">.parent &#123;</span><br><span class="line">      border: solid red 1px;</span><br><span class="line">      width: 400px;</span><br><span class="line">      height: 100px;</span><br><span class="line">      line-height: 100px;</span><br><span class="line">      text-align: center;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>2、多行文本水平垂直居中，垂直方向设置display: table-cell; vertical-align: middle;</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;parent&quot;&gt;hello world, hello world&lt;br&gt;hello world&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">.parent &#123;</span><br><span class="line">      border: solid red 1px;</span><br><span class="line">      width: 400px;</span><br><span class="line">      height: 100px;</span><br><span class="line">      display: table-cell;</span><br><span class="line">      vertical-align: middle;</span><br><span class="line">      text-align: center;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<p>3、父元素中有多个子元素，这些子元素垂直居中</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;parent&quot;&gt;</span><br><span class="line">  &lt;div class=&quot;child&quot;&gt;hello world, hello world&lt;/div&gt;</span><br><span class="line">  &lt;div class=&quot;child&quot;&gt;hello world&lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">.parent &#123;</span><br><span class="line">      border: solid red 1px;</span><br><span class="line">      width: 400px;</span><br><span class="line">      height: 100px;</span><br><span class="line">      display: table-cell;</span><br><span class="line">      vertical-align: middle;</span><br><span class="line">      text-align: center;    /*文本居中*/</span><br><span class="line">    &#125;</span><br><span class="line">    .child &#123;</span><br><span class="line">      border: solid lightgreen 1px;</span><br><span class="line">      width: 300px;</span><br><span class="line">      margin: 0 auto;        /*div居中*/</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<p>————————————————</p>
+<h1 id="五、消除多个inline-block或inline元素中间的空格"><a href="#五、消除多个inline-block或inline元素中间的空格" class="headerlink" title="五、消除多个inline-block或inline元素中间的空格"></a>五、消除多个inline-block或inline元素中间的空格</h1><p>1、将这些元素写在同一行<br>2、在这些元素的父元素上设置样式：font-size: 0，然后在子元素上按照需要设置font-size</p>
+<h1 id="六、百分比间距"><a href="#六、百分比间距" class="headerlink" title="六、百分比间距"></a>六、百分比间距</h1><p>1、margin、padding均相对于父元素的宽度<br>2、top、bottom相对于父元素的高度，left、right相对于父元素的宽度</p>
+<h1 id="七、高度为百分比时父元素必须有高度设置"><a href="#七、高度为百分比时父元素必须有高度设置" class="headerlink" title="七、高度为百分比时父元素必须有高度设置"></a>七、高度为百分比时父元素必须有高度设置</h1><h1 id="八、一个元素的兄弟节点设为position-relative时，该元素位于它的兄弟节点上方"><a href="#八、一个元素的兄弟节点设为position-relative时，该元素位于它的兄弟节点上方" class="headerlink" title="八、一个元素的兄弟节点设为position: relative时，该元素位于它的兄弟节点上方"></a>八、一个元素的兄弟节点设为position: relative时，该元素位于它的兄弟节点上方</h1><p>————————————————<br>版权声明：本文为CSDN博主「sunny2011111」的原创文章，遵循 CC 4.0 BY-SA 版权协议，转载请附上原文出处链接及本声明。<br>原文链接：<a href="https://blog.csdn.net/Sunny2011111/article/details/79817707" target="_blank" rel="noopener">https://blog.csdn.net/Sunny2011111/article/details/79817707</a></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/09/25/css知识点集锦/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-css一些很重要的知识点" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
