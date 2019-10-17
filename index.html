@@ -181,12 +181,17 @@
         <p>最近开始找前端工作，也陆陆续续面试了几家公司。发现面试官对同学的js基础还是比较看重的，不过问的问题都大同小异。下面就总结一些本人以及同学面试过程中遇到的一些高频面试题。希望能对大家有所帮助。</p>
 <h2 id="一、从输入URL到页面展示发生了什么。"><a href="#一、从输入URL到页面展示发生了什么。" class="headerlink" title="一、从输入URL到页面展示发生了什么。"></a>一、从输入URL到页面展示发生了什么。</h2><p>  其实这个问题牵扯到的知识点非常的庞杂，涉及到的每个知识点都可以用专门的学科去研究。这里简单概括一下大概流程。<br>    1、输入网址<br>    2、DNS解析<br>    3、建立tcp连接<br>    4、客户端发送HTPP请求<br>    5、服务器处理请求　<br>    6、服务器响应请求<br>    7、浏览器展示HTML<br>    8、浏览器发送请求获取其他在HTML中的资源。<br>面试官考察的是面试者对知识面的考察，这其中的每个知识点都可以去详细的解答。在这就不过多赘述。</p>
 <h2 id="二、说说你对闭包的理解"><a href="#二、说说你对闭包的理解" class="headerlink" title="二、说说你对闭包的理解"></a>二、说说你对闭包的理解</h2><p>  使用闭包主要是为了设计私有的方法和变量。闭包的优点是可以避免全局变量的污染；缺点是闭包会常驻内存，增加内存使用量，使用不当会造成内存泄漏，在js中，函数即闭包，只有函数才会产生作用域。<br>  闭包有三个特性：<br>    1、函数嵌套函数<br>    2、在函数内部可以引用外部的参数和变量。<br>    3、参数和变量不会以垃圾机制回收。</p>
-<h2 id="三、call-和apply-的作用和区别是什么？"><a href="#三、call-和apply-的作用和区别是什么？" class="headerlink" title="三、call()和apply()的作用和区别是什么？"></a>三、call()和apply()的作用和区别是什么？</h2><p>  作用都是在函数执行的时候，动态改变函数的执行上下文。<br>  call和apply的第一个参数都是改变运行环境的对象。区别是call从第二个参数开始，每一个参数会依次传递给调用函数；apply的第二个参数是数组，数组的每一个成员会依次传递给调用函数。<br>  如：<br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">func.call(func1,var1,var2,var3)</span><br><span class="line">对应的apply写法为</span><br><span class="line">func.apply(func1,[var1,var2,var3])</span><br></pre></td></tr></table></figure></p>
-<h2 id="四、说一说原型规则"><a href="#四、说一说原型规则" class="headerlink" title="四、说一说原型规则"></a>四、说一说原型规则</h2><pre><code>1、所有的引用类型（对象、数组、函数）都具有对象特征，即可扩展属性。
-2、所有的引用类型都有一个__proto__属性，属性值是一个普通的对象。
-3、所有的函数都有一个prototype属性，属性值也是一个普通的对象。
-4、所有的引用类型的__proto__属性值指向它的构造函数的prototype属性值。（即===）
-5、当试图得到一个对象的某个属性时，如果这个对象本身没有这个属性，那么会从他的__proto__（即从他的构造函数的prototype）中寻找。</code></pre><h2 id="五、"><a href="#五、" class="headerlink" title="五、"></a>五、</h2>
+<h2 id="三、call-和apply-的作用和区别是什么？"><a href="#三、call-和apply-的作用和区别是什么？" class="headerlink" title="三、call()和apply()的作用和区别是什么？"></a>三、call()和apply()的作用和区别是什么？</h2><p>  作用都是在函数执行的时候，动态改变函数的执行上下文。<br>  call和apply的第一个参数都是改变运行环境的对象。区别是call从第二个参数开始，每一个参数会依次传递给调用函数；apply的第二个参数是数组，数组的每一个成员会依次传递给调用函数。<br>  如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">func.call(func1,var1,var2,var3)</span><br><span class="line">对应的apply写法为</span><br><span class="line">func.apply(func1,[var1,var2,var3])</span><br></pre></td></tr></table></figure>
+
+<h2 id="四、说一说原型规则"><a href="#四、说一说原型规则" class="headerlink" title="四、说一说原型规则"></a>四、说一说原型规则</h2><p>   1、所有的引用类型（对象、数组、函数）都具有对象特征，即可扩展属性。<br>   2、所有的引用类型都有一个<strong>proto</strong>属性，属性值是一个普通的对象。<br>   3、所有的函数都有一个prototype属性，属性值也是一个普通的对象。<br>   4、所有的引用类型的<strong>proto</strong>属性值指向它的构造函数的prototype属性值。（即===）<br>   5、当试图得到一个对象的某个属性时，如果这个对象本身没有这个属性，那么会从他的<strong>proto</strong>（即从他的构造函数的prototype）中寻找。</p>
+<h2 id="五、new操作符的作用是什么"><a href="#五、new操作符的作用是什么" class="headerlink" title="五、new操作符的作用是什么"></a>五、new操作符的作用是什么</h2><p>  1、创建一个空对象<br>  2、由this变量引用该对象<br>  3、该对象继承该函数的原型（更改原型链的指向）<br>  4、把属性和方法加入到this引用的对象中。<br>  5、新创建的对象由this引用，最后隐式返回this<br>过程如下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var obj = &#123;&#125;;</span><br><span class="line">obj.__proto__=Base.prototype;</span><br><span class="line">Base.call(obj);</span><br></pre></td></tr></table></figure>
+
+
+
+
+
       
 
       
@@ -199,90 +204,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2019/10/16/找工作遇到的一些常见面试题1/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-原型与原型链" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/10/16/原型与原型链/">原型与原型链</a>
-    </h1>
-  
-
-        
-        <a href="/2019/10/16/原型与原型链/" class="archive-article-date">
-  	<time datetime="2019-10-15T17:50:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-16</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="一、构造函数"><a href="#一、构造函数" class="headerlink" title="一、构造函数"></a>一、构造函数</h1><p>构造函数模式的目的就是为了创建一个自定义类，并且创建这个类的实例。构造函数模式中拥有了类和实例的概念，并且实例和实例之间是相互独立的，即实例识别。</p>
-<p>构造函数就是一个普通的函数，创建方式和普通函数没有区别，不同的是构造函数习惯上首字母大写。另外就是调用方式的不同，普通函数是直接调用，而构造函数需要使用new关键字来调用。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">function Person(name, age, gender) &#123;</span><br><span class="line">        this.name = name</span><br><span class="line">        this.age = age</span><br><span class="line">        this.gender = gender</span><br><span class="line">        this.sayName = function () &#123;</span><br><span class="line">            alert(this.name);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    var per = new Person(&quot;孙悟空&quot;, 18, &quot;男&quot;);</span><br><span class="line">    function Dog(name, age, gender) &#123;</span><br><span class="line">        this.name = name</span><br><span class="line">        this.age = age</span><br><span class="line">        this.gender = gender</span><br><span class="line">    &#125;</span><br><span class="line">    var dog = new Dog(&quot;旺财&quot;, 4, &quot;雄&quot;)</span><br><span class="line">    console.log(per);//当我们直接在页面中打印一个对象时，事件上是输出的对象的toString()方法的返回值</span><br><span class="line">    console.log(dog);</span><br></pre></td></tr></table></figure>
-
-<p> <img src="../%E5%8E%9F%E5%9E%8B%E4%B8%8E%E5%8E%9F%E5%9E%8B%E9%93%BE/3174701-1a20d86bf6856c95.png" alt="avatar"></p>
-<p> 每创建一个Person构造函数，在Person构造函数中，为每一个对象都添加了一个sayName方法，也就是说构造函数每执行一次就会创建一个新的sayName方法。这样就导致了构造函数执行一次就会创建一个新的方法，执行10000次就会创建10000个新的方法，而10000个方法都是一摸一样的，为什么不把这个方法单独放到一个地方，并让所有的实例都可以访问到呢?这就需要原型(prototype)</p>
-<h1 id="二、原型"><a href="#二、原型" class="headerlink" title="二、原型"></a>二、原型</h1><p>在JavaScript中，每当定义一个函数数据类型(普通函数、类)时候，都会天生自带一个prototype属性，这个属性指向函数的原型对象，并且这个属性是一个对象数据类型的值。</p>
-<p>让我们用一张图表示构造函数和实例原型之间的关系：<br><img src="../%E5%8E%9F%E5%9E%8B%E4%B8%8E%E5%8E%9F%E5%9E%8B%E9%93%BE/3174701-2dd95188a8f6b19e.png" alt="avatar"><br>原型对象就相当于一个公共的区域，所有同一个类的实例都可以访问到这个原型对象，我们可以将对象中共有的内容，统一设置到原型对象中。</p>
-<h1 id="三、原型链"><a href="#三、原型链" class="headerlink" title="三、原型链"></a>三、原型链</h1><h2 id="1-proto和constructor"><a href="#1-proto和constructor" class="headerlink" title="1.proto和constructor"></a>1.<strong>proto</strong>和constructor</h2><p>每一个对象数据类型(普通的对象、实例、prototype……)也天生自带一个属性<strong>proto</strong>，属性值是当前实例所属类的原型(prototype)。原型对象中有一个属性constructor, 它指向函数对象。<br><img src="../%E5%8E%9F%E5%9E%8B%E4%B8%8E%E5%8E%9F%E5%9E%8B%E9%93%BE/3174701-9a3de0b501161c07.png" alt="avatar"></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">function Person() &#123;&#125;</span><br><span class="line">   var person = new Person()</span><br><span class="line">   console.log(person.__proto__ === Person.prototype)//true</span><br><span class="line">   console.log(Person.prototype.constructor===Person)//true</span><br><span class="line">   //顺便学习一个ES5的方法,可以获得对象的原型</span><br><span class="line">   console.log(Object.getPrototypeOf(person) === Person.prototype) // true</span><br></pre></td></tr></table></figure>
-
-<h2 id="2-何为原型链"><a href="#2-何为原型链" class="headerlink" title="2.何为原型链"></a>2.何为原型链</h2><p>在JavaScript中万物都是对象，对象和对象之间也有关系，并不是孤立存在的。对象之间的继承关系，在JavaScript中是通过prototype对象指向父类对象，直到指向Object对象为止，这样就形成了一个原型指向的链条，专业术语称之为原型链。</p>
-<p>举例说明:person → Person → Object ，普通人继承人类，人类继承对象类</p>
-<p>当我们访问对象的一个属性或方法时，它会先在对象自身中寻找，如果有则直接使用，如果没有则会去原型对象中寻找，如果找到则直接使用。如果没有则去原型的原型中寻找,直到找到Object对象的原型，Object对象的原型没有原型，如果在Object原型中依然没有找到，则返回undefined。</p>
-<p>我们可以使用对象的hasOwnProperty()来检查对象自身中是否含有该属性；使用in检查对象中是否含有某个属性时，如果对象中没有但是原型中有，也会返回true</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">function Person() &#123;&#125;</span><br><span class="line">    Person.prototype.a = 123;</span><br><span class="line">    Person.prototype.sayHello = function () &#123;</span><br><span class="line">      alert(&quot;hello&quot;);</span><br><span class="line">    &#125;;</span><br><span class="line">    var person = new Person()</span><br><span class="line">    console.log(person.a)//123</span><br><span class="line">    console.log(person.hasOwnProperty(&apos;a&apos;));//false</span><br><span class="line">    console.log(&apos;a&apos;in person)//true</span><br></pre></td></tr></table></figure>
-
-<p>person实例中没有a这个属性，从 person 对象中找不到 a 属性就会从 person 的原型也就是 person.<strong>proto</strong> ，也就是 Person.prototype中查找，很幸运地得到a的值为123。那假如 person.<strong>proto</strong>中也没有该属性，又该如何查找？</p>
-<p>当读取实例的属性时，如果找不到，就会查找与对象关联的原型中的属性，如果还查不到，就去找原型的原型，一直找到最顶层Object为止。Object是JS中所有对象数据类型的基类(最顶层的类)在Object.prototype上没有<strong>proto</strong>这个属性。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">console.log(Object.prototype.__proto__ === null) // true</span><br></pre></td></tr></table></figure>
-
-<p><img src="../%E5%8E%9F%E5%9E%8B%E4%B8%8E%E5%8E%9F%E5%9E%8B%E9%93%BE/3174701-18a76d28c0a9ea1b.png" alt="avatar"></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/10/16/原型与原型链/">展开全文 >></a>
         </p>
       
 
@@ -613,6 +534,90 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2019/06/22/css一些很重要的知识点/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-原型与原型链" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/06/16/原型与原型链/">原型与原型链</a>
+    </h1>
+  
+
+        
+        <a href="/2019/06/16/原型与原型链/" class="archive-article-date">
+  	<time datetime="2019-06-15T17:50:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-06-16</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="一、构造函数"><a href="#一、构造函数" class="headerlink" title="一、构造函数"></a>一、构造函数</h1><p>构造函数模式的目的就是为了创建一个自定义类，并且创建这个类的实例。构造函数模式中拥有了类和实例的概念，并且实例和实例之间是相互独立的，即实例识别。</p>
+<p>构造函数就是一个普通的函数，创建方式和普通函数没有区别，不同的是构造函数习惯上首字母大写。另外就是调用方式的不同，普通函数是直接调用，而构造函数需要使用new关键字来调用。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">function Person(name, age, gender) &#123;</span><br><span class="line">        this.name = name</span><br><span class="line">        this.age = age</span><br><span class="line">        this.gender = gender</span><br><span class="line">        this.sayName = function () &#123;</span><br><span class="line">            alert(this.name);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    var per = new Person(&quot;孙悟空&quot;, 18, &quot;男&quot;);</span><br><span class="line">    function Dog(name, age, gender) &#123;</span><br><span class="line">        this.name = name</span><br><span class="line">        this.age = age</span><br><span class="line">        this.gender = gender</span><br><span class="line">    &#125;</span><br><span class="line">    var dog = new Dog(&quot;旺财&quot;, 4, &quot;雄&quot;)</span><br><span class="line">    console.log(per);//当我们直接在页面中打印一个对象时，事件上是输出的对象的toString()方法的返回值</span><br><span class="line">    console.log(dog);</span><br></pre></td></tr></table></figure>
+
+<p> <img src="../%E5%8E%9F%E5%9E%8B%E4%B8%8E%E5%8E%9F%E5%9E%8B%E9%93%BE/3174701-1a20d86bf6856c95.png" alt="avatar"></p>
+<p> 每创建一个Person构造函数，在Person构造函数中，为每一个对象都添加了一个sayName方法，也就是说构造函数每执行一次就会创建一个新的sayName方法。这样就导致了构造函数执行一次就会创建一个新的方法，执行10000次就会创建10000个新的方法，而10000个方法都是一摸一样的，为什么不把这个方法单独放到一个地方，并让所有的实例都可以访问到呢?这就需要原型(prototype)</p>
+<h1 id="二、原型"><a href="#二、原型" class="headerlink" title="二、原型"></a>二、原型</h1><p>在JavaScript中，每当定义一个函数数据类型(普通函数、类)时候，都会天生自带一个prototype属性，这个属性指向函数的原型对象，并且这个属性是一个对象数据类型的值。</p>
+<p>让我们用一张图表示构造函数和实例原型之间的关系：<br><img src="../%E5%8E%9F%E5%9E%8B%E4%B8%8E%E5%8E%9F%E5%9E%8B%E9%93%BE/3174701-2dd95188a8f6b19e.png" alt="avatar"><br>原型对象就相当于一个公共的区域，所有同一个类的实例都可以访问到这个原型对象，我们可以将对象中共有的内容，统一设置到原型对象中。</p>
+<h1 id="三、原型链"><a href="#三、原型链" class="headerlink" title="三、原型链"></a>三、原型链</h1><h2 id="1-proto和constructor"><a href="#1-proto和constructor" class="headerlink" title="1.proto和constructor"></a>1.<strong>proto</strong>和constructor</h2><p>每一个对象数据类型(普通的对象、实例、prototype……)也天生自带一个属性<strong>proto</strong>，属性值是当前实例所属类的原型(prototype)。原型对象中有一个属性constructor, 它指向函数对象。<br><img src="../%E5%8E%9F%E5%9E%8B%E4%B8%8E%E5%8E%9F%E5%9E%8B%E9%93%BE/3174701-9a3de0b501161c07.png" alt="avatar"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">function Person() &#123;&#125;</span><br><span class="line">   var person = new Person()</span><br><span class="line">   console.log(person.__proto__ === Person.prototype)//true</span><br><span class="line">   console.log(Person.prototype.constructor===Person)//true</span><br><span class="line">   //顺便学习一个ES5的方法,可以获得对象的原型</span><br><span class="line">   console.log(Object.getPrototypeOf(person) === Person.prototype) // true</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-何为原型链"><a href="#2-何为原型链" class="headerlink" title="2.何为原型链"></a>2.何为原型链</h2><p>在JavaScript中万物都是对象，对象和对象之间也有关系，并不是孤立存在的。对象之间的继承关系，在JavaScript中是通过prototype对象指向父类对象，直到指向Object对象为止，这样就形成了一个原型指向的链条，专业术语称之为原型链。</p>
+<p>举例说明:person → Person → Object ，普通人继承人类，人类继承对象类</p>
+<p>当我们访问对象的一个属性或方法时，它会先在对象自身中寻找，如果有则直接使用，如果没有则会去原型对象中寻找，如果找到则直接使用。如果没有则去原型的原型中寻找,直到找到Object对象的原型，Object对象的原型没有原型，如果在Object原型中依然没有找到，则返回undefined。</p>
+<p>我们可以使用对象的hasOwnProperty()来检查对象自身中是否含有该属性；使用in检查对象中是否含有某个属性时，如果对象中没有但是原型中有，也会返回true</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">function Person() &#123;&#125;</span><br><span class="line">    Person.prototype.a = 123;</span><br><span class="line">    Person.prototype.sayHello = function () &#123;</span><br><span class="line">      alert(&quot;hello&quot;);</span><br><span class="line">    &#125;;</span><br><span class="line">    var person = new Person()</span><br><span class="line">    console.log(person.a)//123</span><br><span class="line">    console.log(person.hasOwnProperty(&apos;a&apos;));//false</span><br><span class="line">    console.log(&apos;a&apos;in person)//true</span><br></pre></td></tr></table></figure>
+
+<p>person实例中没有a这个属性，从 person 对象中找不到 a 属性就会从 person 的原型也就是 person.<strong>proto</strong> ，也就是 Person.prototype中查找，很幸运地得到a的值为123。那假如 person.<strong>proto</strong>中也没有该属性，又该如何查找？</p>
+<p>当读取实例的属性时，如果找不到，就会查找与对象关联的原型中的属性，如果还查不到，就去找原型的原型，一直找到最顶层Object为止。Object是JS中所有对象数据类型的基类(最顶层的类)在Object.prototype上没有<strong>proto</strong>这个属性。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">console.log(Object.prototype.__proto__ === null) // true</span><br></pre></td></tr></table></figure>
+
+<p><img src="../%E5%8E%9F%E5%9E%8B%E4%B8%8E%E5%8E%9F%E5%9E%8B%E9%93%BE/3174701-18a76d28c0a9ea1b.png" alt="avatar"></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/06/16/原型与原型链/">展开全文 >></a>
         </p>
       
 
